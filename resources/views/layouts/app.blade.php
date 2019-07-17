@@ -38,13 +38,6 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-iten">
-                                <a href="{{ route(Route::currentRouteName(), 'en') }}" class="nav-link">En</a>
-                            </li>
-                            <li class="nav-iten">
-                                <a href="{{ route(Route::currentRouteName(), 'fr') }}" class="nav-link">Fr</a>
-                            </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login', app()->getLocale()) }}">{{ __('Login') }}</a>
                             </li>
@@ -53,6 +46,11 @@
                                     <a class="nav-link" href="{{ route('register', app()->getLocale()) }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            <language-switcher
+                                locale="{{ app()->getLocale() }}"
+                                link-en="{{ route(Route::currentRouteName(), 'en') }}"
+                                link-fr="{{ route(Route::currentRouteName(), 'fr') }}"
+                            ></language-switcher>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

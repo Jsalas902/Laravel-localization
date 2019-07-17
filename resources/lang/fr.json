@@ -1,5 +1,7 @@
 {
     "Name": "FrName",
     "E-Mail Address": "Fr-Mail Address",
-    "Laravel": "FrLaravel"
+    "Laravel": "FrLaravel",
+    "Password": "FrPassword",
+    "Remember Me": "FrRemember Me"
 }
